@@ -1,0 +1,128 @@
+@font-face {
+	font-family: "Lato Light";
+	src:
+		local("Lato Light"), local("Lato-Light"),
+		url("../fonts/lato-light.woff2") format("woff2"),
+		url("../fonts/lato-light.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+} /*"Lato Light"*/
+@font-face {
+	font-family: "Miso";
+	src:
+			local("Miso"), local("Miso"),
+			url("../fonts/miso.woff2") format("woff2"),
+			url("../fonts/miso.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+} /*"Miso"*/
+@font-face {
+	font-family: "Miso Bold";
+	src:
+			local("Miso Bold"), local("Miso-Bold"),
+			url("../fonts/miso-bold.woff2") format("woff2"),
+			url("../fonts/miso-bold.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+} /*"Miso Bold"*/
+
+* { 
+    margin: 0;
+    padding: 0;
+    transition: all .3s ease-in;
+}
+
+body {
+	font-family: "Lato Light", Arial, sans-serif;
+	font-size: 20px;
+	line-height: 26px;
+	letter-spacing: .025em;
+	color: #333;
+	text-align: center;
+}
+
+.items__container {
+	margin: 0 auto;
+    max-width: 1200px;
+    height: 600px;
+
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+
+}
+
+.items__list {
+	width: 100%;
+    height: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+    background-color: #fdde7e;
+    list-style-type: none;
+}
+
+.list__item {
+	width: 360px;
+	padding: 0;
+    list-style-type: none;
+}
+
+.item__link {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 0 0 5px 1px #cab265;
+	height: 442px;
+	box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
+	color: #000;
+}
+
+.item__price {
+	font-family: "Miso Bold", Arial, sans-serif;
+	font-weight: bold;
+	font-size: 70px;
+	line-height: 1;
+	color: #02995b;
+}
+
+.item__icon {
+	width: 135px;
+	height: 135px;
+	margin: -20px 106px 0 126px;
+}
+
+.item__description {
+	width: 162px;
+	padding: 0;
+}
+
+.item__title {
+	font-family: "Miso", Arial, sans-serif;
+	font-weight: normal;
+	font-size: 56px;
+	line-height: 24px;
+	color: #333;
+	padding-bottom: 35px;
+}
+
+.item__link:hover,
+.item__link:focus {
+	height: 500px;
+}
+
+.item__link:active {
+	box-shadow: inset 0 0 25px 10px #cab265;
+}

@@ -5,16 +5,22 @@
 
 body {
     font-family: 'Lato', sans-serif;
+
+}
+.main {
+    margin: 0 auto;
+    width: 1600px;
+    height: 736px;
 }
 
 .container {
-    max-width: 1170px;
+    width: 1170px;
     margin: 0 auto;
 }
 
 .main .container {
     text-align: center;
-    padding: 80px 0 110px 0;
+    padding: 100px 0 170px 0;
 }
 
 .header {
@@ -22,8 +28,7 @@ body {
     font-size: 34px;
     font-weight: 700;
     letter-spacing: 0.2em;
-    line-height: 70px;
-    margin-bottom: 34px;
+    margin-bottom: 38px;
 }
 
 .header::after {
@@ -33,6 +38,7 @@ body {
     height: 4px;
     margin: 0 auto;
     background-color: #dddbdb;
+    margin-top: 16px;
 }
 
 .content {
@@ -40,6 +46,8 @@ body {
     margin: 0 auto;
     font-size: 16px;
     line-height: 24px;
+    font-weight: 300;
+    margin-bottom: 60px;
 }
 
 .first,
@@ -47,6 +55,7 @@ body {
 .third,
 .fourth {
     display: inline-block;
+    height: 322px;
 }
 
 .first,
@@ -56,71 +65,54 @@ body {
 }
 
 .position {
-    white-space: nowrap;
-    margin-top: 53px;
+    white-space: nowrap; 
+    padding-bottom: 0px;  
 }
 
 .card {
-    background-color: transparent;
-    width: 1170px;
-    height: 268px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px;
-  }
-
-.modal {
     position: relative;
+    width: 270px;
+    height: 270px;
+    perspective: 1000px;
+}
+
+.social, .front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
     width: 100%;
     height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    backface-visibility: hidden;
 }
 
 .social {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
     background-color: #18b5dc;
-    opacity: 1;
-    overflow: hidden;
-    transform: rotateY(180deg);
-    transition: all .8s ease-in-out;
-}
-
-.first:hover .modal {
     transform: rotateY(180deg);
 }
-.second:hover .modal {
+.card:hover .front {
     transform: rotateY(180deg);
 }
-.third:hover .modal {
-    transform: rotateY(180deg);
+.card:hover .social {
+    transform: rotateY(360deg);
 }
-.fourth:hover .modal {
-    transform: rotateY(180deg);
-}
-
 .name {
     text-align-last: left;
     padding-top: 20px;
-}
-
-.modal img {
-    display: block;
-    overflow: hidden;
 }
 .name span {
     display: block;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
+
 }
 
-.social .fab {
+.social .fa-twitter,
+.social .fa-facebook-f,
+.social .fa-google-plus-g {
+    transform:translateY(-110px);
     color: white;
     font-size: 24px;
     line-height: 30px;
@@ -128,13 +120,7 @@ body {
     background-color: #5ecbe7;
     width: 50px;
     padding: 10px 0;
-    margin-right: 2px;
-}
-
-.social .fa-twitter,
-.social .fa-facebook-f,
-.social .fa-google-plus-g {
-    transform: translateY(-100px) rotate(-180deg);
+    margin-left: 4px;
 }
 
 .social .fa-twitter {
@@ -142,15 +128,15 @@ body {
 }
 
 .social .fa-facebook-f {
-    transition: transform .3s ease-in-out .5s;
+    transition: transform .3s ease-in-out .4s;
 }
 
 .social .fa-google-plus-g {
-    transition: transform .3s linear .8s;
+    transition: transform .3s ease-in-out .6s;
 }
 
-.modal:hover .social .fa-twitter,
-.modal:hover .social .fa-facebook-f,
-.modal:hover .social .fa-google-plus-g {
-    transform: translate(0, 120px) rotate(360deg);
+.card:hover .social .fa-twitter,
+.card:hover .social .fa-facebook-f,
+.card:hover .social .fa-google-plus-g {
+    transform: translateY(0px) rotate(360deg);
 }
